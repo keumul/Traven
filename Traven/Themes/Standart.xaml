@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+                    xmlns:local="clr-namespace:Traven" >
+    <Style x:Key="rectangle1" TargetType="Label">
+        <Style.Setters>
+            <Setter Property="Label.Background" Value="#FFB4D0DF" />
+        </Style.Setters>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Control.IsMouseOver" Value="True" />
+                    <Condition Property="Control.IsFocused" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Label.Background" Value="#FFD5F0EA" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <SolidColorBrush x:Key="rectangle2" Color="#FFD5F0EA" Opacity="0.45" />
+    <SolidColorBrush x:Key="rectangle3" Color="White" />
+    <SolidColorBrush x:Key="border" Color="Black" />
+    <SolidColorBrush x:Key="rectangle4" Color="White" />
+    <BitmapImage x:Key="background" UriSource="/View/185.jpg"></BitmapImage>
+    <SolidColorBrush x:Key="Font" Color="Black"/>
+</ResourceDictionary>

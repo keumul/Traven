@@ -1,0 +1,18 @@
+<mindmap>
+  <node>
+    <X>639.30000000000007</X>
+    <Y>397.49000000000007</Y>
+    <width>100</width>
+    <height>50</height>
+    <stil>KateApp.Style</stil>
+    <text>Основной узел</text>
+    <form>Ellipse</form>
+    <style>
+      <farbe>#FF000000</farbe>
+      <fill>false</fill>
+      <font>12</font>
+      <icon />
+    </style>
+    <childs />
+  </node>
+</mindmap>

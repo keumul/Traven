@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Traven.View.SignIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d"
+        Height="550" Width="450">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="2"
+                    TextBlock.Foreground="White">
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Center" Background="{DynamicResource rectangle2}" VerticalAlignment="Center" Height="781" Width="842">
+
+        <Rectangle Height="265" VerticalAlignment="Top" Opacity = "1" Fill="{DynamicResource rectangle3}" Margin="-3,-9,-3,0" RenderTransformOrigin="0.5,0.5" >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.55" AngleY="0.113"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.764" Y="0.575"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Grid Margin="308,365,308,200">
+            <TextBox x:Name="NicknameTextBox" HorizontalAlignment="Left" Height="30" Margin="14,35,0,0" TextWrapping="Wrap" Text="{Binding Path=SignInModel.Nickname}" VerticalAlignment="Top" Width="203" FontSize="20" FontWeight="Bold" FontStyle="Italic" CaretBrush="#FFAEAAFD" SelectionBrush="Black" Cursor="Arrow" Background="{x:Null}" Foreground="Black" FontFamily="Century Gothic"/>
+            <Label Content="{DynamicResource m_Nickname}" HorizontalAlignment="Center" Margin="0,4,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Normal" FontStyle="Normal" Background="{x:Null}" FontFamily="Candara Light" Width="207" Foreground="Black"/>
+            <Label Content="{DynamicResource m_Password}" HorizontalAlignment="Left" Margin="9,66,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Normal" FontStyle="Normal" Background="{x:Null}" FontFamily="Candara Light" Foreground="Black"/>
+
+            <Button x:Name="SignInButton" Command ="{Binding Path=SignInCommand}" CommandParameter="{Binding ElementName=PasswordBox}" Content="{DynamicResource m_SignIn}" HorizontalAlignment="Left" Margin="14,141,0,0" VerticalAlignment="Top" Width="203" Height="36" FontSize="18" FontWeight="Normal" Foreground="{DynamicResource Font}" BorderBrush="White" Cursor="Hand" FontFamily="Candara Light" Background="{DynamicResource rectangle3}"/>
+            <Label Content="{DynamicResource m_Or}" HorizontalAlignment="Left" Margin="55,178,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontStyle="Normal" Background="{x:Null}" FontFamily="Candara Light"/>
+            <Label x:Name="SignUpButton" Content="{DynamicResource m_SignUp}" 
+               Margin="73,174,1,0" VerticalAlignment="Top" FontSize="18" FontWeight="Normal" FontStyle="Normal" FontFamily="Candara Light">
+                <Label.Foreground>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF002DDD" Offset="1"/>
+                    </RadialGradientBrush>
+                </Label.Foreground>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDown">
+                        <i:InvokeCommandAction Command="{Binding SetSignUpViewCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Label>
+            <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="15,98,0,0" VerticalAlignment="Top" Width="201" Height="30" FontFamily="Century Gothic" Background="{x:Null}"/>
+        </Grid>
+        <Border BorderBrush="{DynamicResource border}" BorderThickness="1" Margin="0,128,0,130" HorizontalAlignment="Center" Width="426">
+            <Label Content="{DynamicResource m_Welcome}" Foreground="{DynamicResource Font}" Margin="15,89,179,378" FontFamily="Candara Light" FontSize="25" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-179.946"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Border>
+
+    </Grid>
+</UserControl>

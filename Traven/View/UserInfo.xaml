@@ -1,0 +1,27 @@
+﻿<Window x:Class="Traven.View.UserInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Traven.Logic.ViewModel"
+        mc:Ignorable="d"
+        Title="UserInfo" Height="100" Width="300" WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:UserInfoVM/>
+    </Window.DataContext>
+    <Grid Background="{DynamicResource rectangle4}">
+        <StackPanel x:Name="UserInformation" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,14,0,0" Width="249">
+            <Image Width="77" Source="{Binding Path=Avatar}" Height="71"/>
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="{Binding Path=Name}" Foreground="{DynamicResource Font}" FontSize="16" FontWeight="Bold" FontFamily="Candara Light"/>
+                <TextBlock Text="{Binding Path=Surname}" Foreground="{DynamicResource Font}" FontSize="16" FontWeight="Bold" FontFamily="Candara Light"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="ExitButton" 
+                Content="Х" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Height="15" FontSize="12" FontWeight="Bold" Foreground="{DynamicResource Font}" BorderBrush="{x:Null}" Cursor="Hand" Margin="273,11,0,0" 
+                FontFamily="Candara Light" Background="{DynamicResource rectangle3}" Click="ExitButton_Click">
+        </Button>
+        <Border BorderBrush="{DynamicResource border}" BorderThickness="1" HorizontalAlignment="Center" Height="92" VerticalAlignment="Center" Width="293" Visibility="Visible"/>
+    </Grid>
+</Window>

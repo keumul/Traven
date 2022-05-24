@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Traven.Logic.ViewModel.classes.AMindMapVM" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAECgEBAAggAAIAAAAAACgAAYAAgQA=</HashCode>
+      <FileName>Logic\ViewModel\classes\AMindMapVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.ANodeVM" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAAAAAAAAAAhCAEAAAACACgABAAABEIAgEAAIBQAAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\ANodeVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.AStyleVM" Collapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAQABAAAAAEoAACAAAAAAAAAgMAYAAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\AStyleVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.EllipseVM" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\EllipseVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.MindMapNodesVM" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAABEAgAAAAggAAAAABAAACkAAAAAgQA=</HashCode>
+      <FileName>Logic\ViewModel\classes\MindMapNodesVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.NodeVM" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAACBEAAAACACgAgAAABAIAgEAAQBABAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\NodeVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.RechteckVM" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\RechteckVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.classes.StyleVM" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAgAAAQCAAAAABEgCACAAAAAAQAAgMAYAAA=</HashCode>
+      <FileName>Logic\ViewModel\classes\StyleVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.MainWindowVM" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIjIiAACCIAAEAQAABAAgBAAAAAEQQACAwgAgBAAAA=</HashCode>
+      <FileName>Logic\ViewModel\MainWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.MenuVM" Collapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAEEgEQAAAREBACIAEAAQABAAAAAQRA=</HashCode>
+      <FileName>Logic\ViewModel\MenuVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.MindMapMainVM" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>mBEAAACIAAACCElIAaDAkoxAwAbNgoABAAADgACJQJk=</HashCode>
+      <FileName>Logic\ViewModel\MindMapMainVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.SignInVM" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAEAAABBAgBAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Logic\ViewModel\SignInVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traven.Logic.ViewModel.SignUpVM" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAASCABAAAAAABBAAAAQAAAAAAAAAAAABA=</HashCode>
+      <FileName>Logic\ViewModel\SignUpVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

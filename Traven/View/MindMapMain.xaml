@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Traven.View.MindMapMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             Height="550" Width="900" KeyDown="KeyPressed" Loaded="Window_Loaded">
+    <DockPanel LastChildFill="True" x:Name="DockPanel" >
+        <Menu DockPanel.Dock="Top" x:Name="MenuBar" Panel.ZIndex="99" Background="{DynamicResource rectangle2}">
+            <MenuItem Header="{DynamicResource m_File}" FontFamily="Candara Light" >
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0">
+                        <GradientStop Color="#FFBBEFFE"/>
+                        <GradientStop Color="#FFC4D9FB" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem Header="Delete" Click="MenuItem_Click_0"/>
+                <MenuItem Header="{DynamicResource m_SaveOnComputer}" Click="MenuItem_Click" />
+                <MenuItem Header="{DynamicResource m_Loaded}" Click="MenuItem_Click_2"/>
+                <MenuItem Header="{DynamicResource m_Save}" Click="MenuItem_Click_1"/>
+                <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding Path=MindMapCommand}"/>
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="{DynamicResource m_Option}" FontFamily="Candara Light"  >
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0">
+                        <GradientStop Color="#FFBBEEFE"/>
+                        <GradientStop Color="#FFC6D6FA" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem Header="{DynamicResource m_HideToolbox}" IsCheckable="True" Checked="ToolboxRemove_Click" Unchecked="ToolboxAdd_Click"  />
+                <Separator />
+                <MenuItem Header="{DynamicResource m_ChangeBackgroundColor}" Click="ChangeBackgroundColor_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Right" Width="159" x:Name="Toolbox" Panel.ZIndex="999999" Background="{DynamicResource rectangle2}">
+            <Button x:Name="addNode" Content="{DynamicResource m_AddNode}" Click="addNode_Click" FontFamily="Candara Light" Width="146" Margin="0, 5, 0, 5" Background="White" BorderBrush="Black"/>
+            <Button x:Name="removeNOde" Content="{DynamicResource m_DeleteNode}" Click="removeNOde_Click" FontFamily="Candara Light" Width="146" BorderBrush="Black" Background="White"/>
+            <Separator >
+                <Separator.Background>
+                    <SolidColorBrush Color="#FF65B8C8" Opacity="0.3"/>
+                </Separator.Background>
+            </Separator>
+            <Label Content="{DynamicResource m_Text}" FontFamily="Candara Light"/>
+            <TextBox x:Name="nodeText" Height="100" TextWrapping="Wrap" Text="{DynamicResource m_NodeText}" AcceptsReturn="True" TextChanged="nodeText_TextChanged"  UseLayoutRounding="False" Margin="0, 5, 0, 5" FontFamily="Candara Light" Width="146" BorderBrush="Black" />
+            <Label Content="{DynamicResource m_FontSize}" x:Name="FontSizeLabel" FontFamily="Candara Light"/>
+            <Slider x:Name="FontSlider" Value="12" Minimum="1" Maximum="48" TickFrequency="1" ValueChanged="Slider_ValueChanged" Width="155" Margin="0, 5, 0, 5"/>
+            <Button x:Name="chooseColorButton" Content="{DynamicResource m_NodeColor}" Click="ChooseColor_Click" FontFamily="Candara Light" Width="146" Margin="0, 5, 0, 5" BorderBrush="Black" Background="White"/>
+            <StackPanel Orientation="Horizontal" Width="129">
+                <Rectangle  Width="16" Height="16" x:Name="colorRect" Fill="Black"  />
+                <CheckBox x:Name="fillCheckBox" Content="{DynamicResource m_FillWithColor}" Checked="fillCheckBox_Checked" Unchecked="fillCheckBox_Unchecked" FontFamily="Candara Light" Margin="0, 5, 0, 5"/>
+            </StackPanel>
+            <Label Content="{DynamicResource m_NodeShape}" FontFamily="Candara Light" Width="155"/>
+            <ComboBox x:Name="ChooseForm" SelectedIndex="0" SelectionChanged="ChooseForm_SelectionChanged" FontFamily="Candara Light" Width="146">
+                <ComboBoxItem x:Name="Rectangle" Content="{DynamicResource m_Rectangle}"/>
+                <ComboBoxItem x:Name="Circle" Content="{DynamicResource m_Oval}"/>
+            </ComboBox>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{DynamicResource m_ChooseSymbol}" FontFamily="Candara Light" Width="108"/>
+                <Image Height="20" Width="22" x:Name="IconImage"/>
+
+            </StackPanel>
+            <Button x:Name="AddIcon" Content="{DynamicResource m_ChooseSymbol}" Click="AddIcon_Click" FontFamily="Candara Light" Width="146" Background="White" BorderBrush="Black" />
+        </StackPanel>
+        <ScrollViewer x:Name="ScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas x:Name="MindMapCanvas" Background="White" MouseMove="MindMapCanvas_MouseMove" SizeChanged="MindMapCanvas_SizeChanged" >
+            </Canvas>
+        </ScrollViewer>
+
+    </DockPanel>
+
+</UserControl>
+    
+    
+    

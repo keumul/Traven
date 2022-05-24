@@ -1,0 +1,81 @@
+﻿<Window x:Class="Traven.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Traven.Logic.ViewModel"
+        xmlns:view="clr-namespace:Traven.View"
+        Title="Травень" Height="664" Width="926" WindowStyle="{Binding WindowStyle}" WindowState="{Binding WindowState}">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:SignInVM}">
+            <view:SignIn/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SignUpVM}">
+            <view:SignUp/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:MenuVM}">
+            <view:Menu/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:MindMapMainVM}">
+            <view:MindMapMain/>
+        </DataTemplate>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource background}"/>
+    </Window.Background>
+    <Window.DataContext>
+        <vm:MainWindowVM/>
+    </Window.DataContext>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,22">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Command="{Binding LanguagesCommand}" Margin="18,1,0,1" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FFBCBEBE" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+                ENG
+            </Button>
+            <Button Command="{Binding ThemesCommand}" Margin="0,1,37,0" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FFC4BFE0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+                ◨
+            </Button>
+
+            <Button Grid.Column="2" Command="{Binding ToggleFullscreenCommand}" Margin="1,-1,24,0" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14" Height="26" VerticalAlignment="Top">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFBFF0F6"/>
+                        <GradientStop Color="#FF949CCF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+                ◩
+            </Button>
+            <Button Grid.Column="2" Command="{Binding ExitCommand}" Margin="26,2,3,6" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF67F7F"/>
+                        <GradientStop Color="#FFE65E59" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+                ✖
+            </Button>
+        </Grid>
+        <ContentControl Content="{Binding CurrentViewModel}" Margin="0,24,0,0" Grid.RowSpan="2"/>
+    </Grid>
+
+
+</Window>
