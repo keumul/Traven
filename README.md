@@ -8,3 +8,4 @@
 + WPF technology;
 + Entity Framework technology;
 + Microsoft SQL Server
+### The pattern used is MVVM
